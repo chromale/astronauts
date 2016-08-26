@@ -1,0 +1,53 @@
+.main-title {
+	text-align: center;
+	margin: 40px 0;
+}
+
+.single-astronaut {
+	display: flex;
+	align-content: flex-start;
+	margin: 5px 0;
+	padding: 20px;
+	background-color: rgb(21, 21, 21);
+	border-radius: 4px;
+}
+
+@media only screen and (max-width : 768px) {
+	.single-astronaut {
+		flex-direction: column;
+	}
+
+	.astronaut-list-heading {
+		display: none;
+	}
+}
+
+
+.single-astronaut span {
+	flex: 1;
+}
+
+.astronaut-list-heading {
+	background: transparent;
+}
+
+.form-fides {
+	margin: 75px 0 0 0;
+}
+
+.btn-fides {
+    text-align: center;
+    margin: 0 auto;
+    background-color: #007c5c;
+    font-size: 20px;
+    margin: 20px 0;
+    color: #fff;
+}
+
+.btn-fides:hover {
+    background-color: #00533e;
+}
+
+.github {
+	margin: 5px 0 30px 0;
+}

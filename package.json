@@ -1,0 +1,18 @@
+{
+  "name": "techfides",
+  "version": "0.0.1",
+  "description": "Techfides awesome space quest",
+  "main": "index.html",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "cv",
+    "job",
+    "interview",
+    "space",
+    "nasa"
+  ],
+  "author": "Aleš Chromec",
+  "license": "MIT"
+}

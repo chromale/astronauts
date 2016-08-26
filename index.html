@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<title>Astronaut template</title>
+
+<!-- Bootstrap -->
+<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap Darkly theme -->
+<link href="css/bootstrap-darkly.min.css" rel="stylesheet">
+
+<!-- Custom styles -->
+<link href="css/fides.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+ <!--[if lt IE 9]>
+   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+   <![endif]-->
+</head>
+<body ng-app="fides">
+
+	<div ng-controller="mainController">
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 class="main-title">AAD - Awesome astronaut database</h1>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<div class="github">
+						<a href="https://github.com/chromale/astronauts">AAD on GitHub</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="astronaut-holder">
+						<div class="single-astronaut astronaut-list-heading">
+							<span>First name</span>
+							<span>Last name</span>
+							<span>Birthday</span>
+							<span>Superpower</span>
+							<span>Available actions</span>
+						</div>
+						<div class="single-astronaut" ng-repeat="astronaut in astronauts">
+							<span>{{astronaut.first_name}}</span>
+							<span>{{astronaut.last_name}}</span>
+							<span>{{astronaut.birthday}}</span>
+							<span>{{astronaut.superpower}}</span>
+							<span><a href="javascript:void(0)" ng-click="deleteAstronaut($index);">Delete astronaut</a></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<form class="form-horizontal form-fides">
+						<div class="form-group">
+							<label for="firstName" class="col-lg-2 col-lg-offset-1 control-label">First name</label>
+							<div class="col-lg-8">
+								<input type="text" class="form-control" ng-model="newAstronaut.first_name" id="firstName" placeholder="First name">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="lastName" class="col-lg-2 col-lg-offset-1 control-label">Last name</label>
+							<div class="col-lg-8">
+								<input type="text" class="form-control" ng-model="newAstronaut.last_name" id="lastName" placeholder="Last name">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="birthday" class="col-lg-2 col-lg-offset-1 control-label">Birthday</label>
+							<div class="col-lg-8">
+								<input type="text" class="form-control" ng-model="newAstronaut.birthday" id="birthday" placeholder="Birthday">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="superpower" class="col-lg-2 col-lg-offset-1 control-label">Super power</label>
+							<div class="col-lg-8">
+								<input type="text" class="form-control" ng-model="newAstronaut.superpower" id="superpower" placeholder="Superpower">
+							</div>
+						</div>
+
+						<div class="text-center">
+							<a class="btn btn-fides" ng-click="addAstronaut();">Add new hero</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+
+
+	</div>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- Angular.JS -->
+	<script src="vendor/js/angular.min.js"></script>
+
+	<!-- Angular main app file -->
+	<script src="js/app.js"></script>
+
+</body>
+</html>
